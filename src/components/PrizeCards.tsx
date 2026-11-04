@@ -9,11 +9,10 @@ type CardProps = {
   sets: PrizeSet[]
   selected: Selection
   onSelect: (s: Selection) => void
-  onReroll: () => void
   className: string
 }
 
-export function PrizeCard({ prize, sets, selected, onSelect, onReroll, className }: CardProps) {
+export function PrizeCard({ prize, sets, selected, onSelect, className }: CardProps) {
   const [copied, setCopied] = useState(false)
   const label = PRIZE_LABELS[prize]
 
@@ -31,14 +30,9 @@ export function PrizeCard({ prize, sets, selected, onSelect, onReroll, className
     <section className={`card ${className}`} aria-label={label}>
       <div className="card-head">
         <h2>{label}</h2>
-        <div className="btn-row">
-          <button type="button" className="btn btn-small" onClick={copy} aria-label={`คัดลอก${label}`}>
-            {copied ? 'คัดลอกแล้ว' : 'คัดลอก'}
-          </button>
-          <button type="button" className="btn btn-small" onClick={onReroll} aria-label={`สุ่มชุดใหม่ ${label}`}>
-            สุ่มชุดใหม่
-          </button>
-        </div>
+        <button type="button" className="btn btn-small" onClick={copy} aria-label={`คัดลอก${label}`}>
+          {copied ? 'คัดลอกแล้ว' : 'คัดลอก'}
+        </button>
       </div>
       <div className="set-list">
         {sets.map((set, si) => (

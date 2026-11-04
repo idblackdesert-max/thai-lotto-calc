@@ -1,46 +1,28 @@
-import { signalKeys, type SignalKey, type Weights } from '../lib/config'
+import { signalKeys, type Weights } from '../lib/config'
 import { SIGNAL_LABELS } from '../lib/engine/types'
 import { SIGNAL_COLORS } from '../lib/signalColors'
 
-type Props = {
-  weights: Weights
-  percents: Weights
-  hasBirth: boolean
-  onChange: (key: SignalKey, value: number) => void
-  onReset: () => void
-}
-
-export function TunePanel({ weights, percents, hasBirth, onChange, onReset }: Props) {
+/** แสดงสูตรที่ใช้ (แก้ไม่ได้ — เลขต้องขึ้นกับงวดและวันเกิดเท่านั้น จึงได้เลขเดิมทุกเครื่อง) */
+export function TunePanel({ percents, hasBirth }: { percents: Weights; hasBirth: boolean }) {
   return (
     <details className="card area-tune">
-      <summary>ปรับสูตร</summary>
-      {signalKeys.map((key) => {
-        const disabled = key === 'personal' && !hasBirth
-        return (
-          <label key={key} className="slider">
-            <span>
-              <span className="swatch" style={{ background: SIGNAL_COLORS[key] }} aria-hidden="true" />
-              {SIGNAL_LABELS[key]}
-              {disabled && <span className="muted small"> (ยังไม่ได้กรอกวันเกิด)</span>}
-            </span>
-            <span className="num">{Math.round(percents[key])}%</span>
-            <input
-              type="range"
-              min={0}
-              max={100}
-              step={5}
-              value={weights[key]}
-              disabled={disabled}
-              onChange={(e) => onChange(key, Number(e.target.value))}
-              aria-valuetext={`${Math.round(percents[key])} เปอร์เซ็นต์`}
-            />
-          </label>
-        )
-      })}
-      <button type="button" className="btn btn-small" onClick={onReset}>
-        ค่าเริ่มต้น
-      </button>
-      <p className="muted small" style={{ margin: '8px 0 0' }}>ระบบปรับรวมให้เป็น 100% อัตโนมัติ ผลลัพธ์เปลี่ยนทันที</p>
+      <summary>สูตรที่ใช้</summary>
+      {signalKeys.map((key) => (
+        <div key={key} className="slider">
+          <span>
+            <span className="swatch" style={{ background: SIGNAL_COLORS[key] }} aria-hidden="true" />
+            {SIGNAL_LABELS[key]}
+            {key === 'personal' && !hasBirth && <span className="muted small"> (ไม่ได้กรอกวันเกิด)</span>}
+          </span>
+          <span className="num">{Math.round(percents[key])}%</span>
+          <div className="bar" aria-hidden="true">
+            <span style={{ width: `${percents[key]}%`, background: SIGNAL_COLORS[key] }} />
+          </div>
+        </div>
+      ))}
+      <p className="muted small" style={{ margin: '8px 0 0' }}>
+        สูตรเหมือนกันทุกคน เลขจึงขึ้นกับงวดและวันเกิดเท่านั้น — วันเกิดเดียวกันได้เลขเดียวกันทุกเครื่อง และหักคะแนนเลขกาลกิณีเสมอ
+      </p>
     </details>
   )
 }

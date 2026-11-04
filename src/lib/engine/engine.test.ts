@@ -16,7 +16,6 @@ const baseInput: GenerateInput = {
   weights: defaults.weights,
   birth: null,
   cutKalakini: true,
-  nonce: 0,
 }
 const zeroWeights: Weights = { statistics: 0, dayPlanet: 0, numerology: 0, lunar: 0, zodiac: 0, personal: 0 }
 
@@ -116,11 +115,12 @@ describe('generate', () => {
     expect(r.sets.last2[0].digits).toBe('00')
   })
 
-  it('ชุดที่ 2 ไม่ซ้ำชุดที่ 1 (หลายวันเกิด หลาย nonce)', () => {
+  it('ชุดที่ 2 ไม่ซ้ำชุดที่ 1 (หลายวันเกิด หลายงวด)', () => {
     const births = [null, { date: '1990-01-01', wednesdayNight: false }, { date: '1978-06-14', wednesdayNight: true }]
+    const drawDates = ['2026-11-16', '2026-12-01', '2026-12-16', '2027-01-02', '2027-01-17']
     for (const birth of births)
-      for (let nonce = 0; nonce < 15; nonce++) {
-        const r = generate({ ...baseInput, birth, nonce })
+      for (const drawDate of drawDates) {
+        const r = generate({ ...baseInput, birth, drawDate })
         expect(r.sets.front3[0].digits).not.toBe(r.sets.front3[1].digits)
         expect(r.sets.last3[0].digits).not.toBe(r.sets.last3[1].digits)
       }
@@ -132,9 +132,9 @@ describe('generate', () => {
     expect(r.sets.front3[1].digits).not.toBe('222')
   })
 
-  it('กด "สุ่มชุดใหม่" (nonce) แล้วได้ผลต่างจากชุดมาตรฐาน', () => {
-    const a = generate(baseInput).sets
-    const b = generate({ ...baseInput, nonce: 1 }).sets
+  it('เลขขึ้นกับงวดและวันเกิด: เปลี่ยนวันเกิดแล้วได้เลขต่างกัน', () => {
+    const a = generate({ ...baseInput, birth: { date: '1985-03-12', wednesdayNight: false } }).sets
+    const b = generate({ ...baseInput, birth: { date: '1990-07-01', wednesdayNight: false } }).sets
     expect(JSON.stringify(b)).not.toBe(JSON.stringify(a))
   })
 

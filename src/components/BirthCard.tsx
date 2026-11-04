@@ -1,48 +1,65 @@
 import { useState, type FormEvent } from 'react'
 import type { BirthInput } from '../lib/engine/personal'
-import type { GenerateResult } from '../lib/engine/generate'
-import { daysInMonth, isoDate, parseIso, THAI_MONTHS, toBuddhistYear } from '../lib/thaiDate'
+import type { Ticket } from '../lib/tickets'
+import { daysInMonth, formatThaiShort, isoDate, parseIso, THAI_MONTHS, toBangkok, toBuddhistYear } from '../lib/thaiDate'
 
 type Props = {
-  birth: BirthInput | null
-  remember: boolean
-  cutKalakini: boolean
+  drawDate: string
+  /** ตั๋วของงวดนี้ (ล็อกแล้ว) หรือ null */
+  ticket: Ticket | null
+  /** วันเกิดที่ผู้ใช้เลือกให้จำไว้ (ใช้เติมฟอร์มงวดถัดไป) */
+  rememberedBirth: BirthInput | null
   thisYear: number
-  personal: GenerateResult['context']['personal']
   drawDayIsKalakini: boolean
-  onSubmit: (birth: BirthInput | null, remember: boolean) => void
-  onCutKalakini: (value: boolean) => void
+  onLock: (birth: BirthInput | null, remember: boolean) => void
 }
 
 export function BirthCard(props: Props) {
-  const initial = props.birth ? parseIso(props.birth.date) : null
+  const initial = props.rememberedBirth ? parseIso(props.rememberedBirth.date) : null
   const [day, setDay] = useState(initial ? String(initial.day) : '')
   const [month, setMonth] = useState(initial ? String(initial.month) : '')
   const [beYear, setBeYear] = useState(initial ? String(toBuddhistYear(initial.year)) : '')
-  const [wednesdayNight, setWednesdayNight] = useState(props.birth?.wednesdayNight ?? false)
-  const [remember, setRemember] = useState(props.remember)
+  const [wednesdayNight, setWednesdayNight] = useState(props.rememberedBirth?.wednesdayNight ?? false)
+  const [remember, setRemember] = useState(props.rememberedBirth !== null)
+
+  const t = props.ticket
+  if (t) {
+    const p = t.personal
+    return (
+      <section className="card area-user" aria-labelledby="birth-title">
+        <h2 id="birth-title">เลขของคุณงวดนี้</h2>
+        <div className="locked">
+          <span aria-hidden="true">🔒</span>
+          <span>
+            ล็อกแล้วเมื่อ {formatThaiShort(toBangkok(new Date(t.lockedAt)).date)} — เปิดวันไหนก็ได้เลขเดิมจนถึงงวด {formatThaiShort(t.drawDate)}
+          </span>
+        </div>
+        <p className="muted small" style={{ margin: '8px 0 0' }}>
+          {p
+            ? `เกิดวัน${p.planetName} (${p.planet}) · ศรี ${p.sri} · เดช ${p.det} · กาลกิณี ${p.kalakini} · ผลรวมวันเกิด ${p.numerology}`
+            : 'คำนวณโดยไม่ใช้วันเกิด'}
+          <br />
+          งวดหน้าจะคำนวณใหม่ได้หลังออกรางวัล 16:00 น.
+        </p>
+        {props.drawDayIsKalakini && (
+          <div className="warn">วันออกรางวัลงวดนี้ตรงกับวันกาลกิณีของคุณ (เป็นข้อสังเกตตามตำรา ไม่มีผลต่อการคำนวณ)</div>
+        )}
+      </section>
+    )
+  }
 
   const complete = day && month && beYear
+  const partial = (day || month || beYear) && !complete
   const maxDay = month && beYear ? daysInMonth(Number(beYear) - 543, Number(month)) : 31
   const invalid = complete && Number(day) > maxDay
 
   function submit(e: FormEvent) {
     e.preventDefault()
-    if (!complete) return props.onSubmit(null, remember)
-    if (invalid) return
-    props.onSubmit({ date: isoDate(Number(beYear) - 543, Number(month), Number(day)), wednesdayNight }, remember)
-  }
-
-  function clear() {
-    setDay('')
-    setMonth('')
-    setBeYear('')
-    setWednesdayNight(false)
-    props.onSubmit(null, remember)
+    if (partial || invalid) return
+    props.onLock(complete ? { date: isoDate(Number(beYear) - 543, Number(month), Number(day)), wednesdayNight } : null, remember)
   }
 
   const years = Array.from({ length: 100 }, (_, i) => toBuddhistYear(props.thisYear) - i)
-  const p = props.personal
 
   return (
     <form className="card area-user" onSubmit={submit} aria-labelledby="birth-title">
@@ -68,36 +85,19 @@ export function BirthCard(props: Props) {
         </select>
       </div>
       {invalid && <div className="warn">เดือนนี้มีแค่ {maxDay} วัน</div>}
+      {partial && <div className="warn">กรอกวัน เดือน ปี ให้ครบ หรือเว้นว่างทั้งหมด</div>}
       <label className="check">
         <input type="checkbox" checked={wednesdayNight} onChange={(e) => setWednesdayNight(e.target.checked)} />
         เกิดวันพุธกลางคืน (หลัง 18:00)
       </label>
       <label className="check">
         <input type="checkbox" checked={remember} onChange={(e) => setRemember(e.target.checked)} />
-        จำวันเกิด (เก็บในเครื่องนี้เท่านั้น)
+        จำวันเกิดไว้ใช้งวดหน้า (เก็บในเครื่องนี้เท่านั้น)
       </label>
-      <label className="check">
-        <input type="checkbox" checked={props.cutKalakini} onChange={(e) => props.onCutKalakini(e.target.checked)} />
-        ตัดเลขกาลกิณี
-      </label>
-      <div className="btn-row">
-        <button type="submit" className="btn btn-primary">คำนวณเลข</button>
-      </div>
-      {props.birth && (
-        <button type="button" className="btn btn-small" style={{ marginTop: 8 }} onClick={clear}>
-          ล้างวันเกิด
-        </button>
-      )}
+      <button type="submit" className="btn btn-primary">คำนวณเลขงวด {formatThaiShort(props.drawDate)}</button>
       <p className="muted small" style={{ margin: '8px 0 0' }}>
-        {p
-          ? `เกิดวัน${p.planetName} (${p.planet}) · ศรี ${p.sri} · เดช ${p.det} · กาลกิณี ${p.kalakini} · ผลรวมวันเกิด ${p.numerology}`
-          : 'ยังไม่ได้กรอกวันเกิด — ระบบจะไม่ใช้คะแนนจากวันเกิด'}
-        <br />
-        วันเกิดคำนวณในเครื่องของคุณเท่านั้น ไม่ถูกส่งไปที่ใด
+        กดแล้ว<strong>เลขงวดนี้จะถูกล็อก</strong> เปลี่ยนไม่ได้จนออกรางวัล · วันเกิดคำนวณในเครื่องของคุณเท่านั้น ไม่ถูกส่งไปที่ใด
       </p>
-      {props.drawDayIsKalakini && (
-        <div className="warn">วันออกรางวัลงวดนี้ตรงกับวันกาลกิณีของคุณ (เป็นข้อสังเกตตามตำรา ไม่มีผลต่อการคำนวณ)</div>
-      )}
     </form>
   )
 }

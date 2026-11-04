@@ -14,8 +14,6 @@ export type GenerateInput = {
   birth: BirthInput | null
   /** ลดคะแนนเลขกาลกิณี */
   cutKalakini: boolean
-  /** 0 = ชุดมาตรฐาน · มากกว่า 0 = ผู้ใช้กด "สุ่มชุดใหม่" */
-  nonce: number
 }
 
 export type Part = { signal: SignalKey | 'kalakini'; label: string; value: number; reason: string }
@@ -125,12 +123,12 @@ export function generate(input: GenerateInput): GenerateResult {
   const sets = {} as Record<PrizeType, PrizeSet[]>
   for (const prize of PRIZE_TYPES) {
     const slots = table[prize]
-    const rand = mulberry32(hashString(`${seedBase}|${prize}|${input.nonce}`))
+    const rand = mulberry32(hashString(`${seedBase}|${prize}`))
     const sample = () => slots.map((slot) => weightedPick(slot.totals, rand))
     const chosen: number[][] = []
 
-    // ชุดที่ 1: คะแนนสูงสุด (ถ้ากดสุ่มชุดใหม่ ชุดที่ 1 ก็สุ่มด้วย)
-    chosen.push(input.nonce === 0 ? slots.map((slot) => ranked(slot)[0]) : sample())
+    // ชุดที่ 1: คะแนนสูงสุด
+    chosen.push(slots.map((slot) => ranked(slot)[0]))
 
     // ชุดที่ 2: สุ่มถ่วงน้ำหนัก ห้ามซ้ำชุดแรก
     if (SET_COUNT[prize] > 1) {
