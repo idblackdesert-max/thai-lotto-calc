@@ -1,0 +1,17 @@
+{
+  "_note": "ค่าเริ่มต้นของสูตร · weights = น้ำหนักแถบเลื่อน (ระบบปรับรวมเป็น 100% เอง)",
+  "weights": {
+    "statistics": 50,
+    "dayPlanet": 15,
+    "numerology": 10,
+    "lunar": 10,
+    "zodiac": 5,
+    "personal": 10
+  },
+  "decay": 0.95,
+  "kalakiniPenalty": 0.5,
+  "drawsUsed": 24,
+  "drawsStored": 48,
+  "cutoffHour": 16,
+  "staleDays": 20
+}

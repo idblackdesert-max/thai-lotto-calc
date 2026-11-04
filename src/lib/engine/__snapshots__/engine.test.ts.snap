@@ -1,0 +1,20 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`generate > snapshot ผลลัพธ์งวด 16 พ.ย. 2569 (ข้อมูลจำลองคงที่ — ไม่ผูกกับ draws.json ที่อัปเดตทุกงวด) 1`] = `
+{
+  "first6": [
+    "777473",
+  ],
+  "front3": [
+    "637",
+    "333",
+  ],
+  "last2": [
+    "73",
+  ],
+  "last3": [
+    "674",
+    "360",
+  ],
+}
+`;

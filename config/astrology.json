@@ -1,0 +1,25 @@
+{
+  "_note": "ค่าทางโหราศาสตร์ไทย แก้ได้ตามตำราที่ต้องการ · dayOfWeek 0 = อาทิตย์",
+  "days": [
+    { "dayOfWeek": 0, "name": "อาทิตย์", "number": 1, "color": "#d32f2f", "colorName": "แดง" },
+    { "dayOfWeek": 1, "name": "จันทร์", "number": 2, "color": "#f2c200", "colorName": "เหลือง" },
+    { "dayOfWeek": 2, "name": "อังคาร", "number": 3, "color": "#e86a9a", "colorName": "ชมพู" },
+    { "dayOfWeek": 3, "name": "พุธ", "number": 4, "color": "#2e9e4f", "colorName": "เขียว" },
+    { "dayOfWeek": 4, "name": "พฤหัสบดี", "number": 5, "color": "#f07c1e", "colorName": "ส้ม" },
+    { "dayOfWeek": 5, "name": "ศุกร์", "number": 6, "color": "#2f6fd0", "colorName": "ฟ้า" },
+    { "dayOfWeek": 6, "name": "เสาร์", "number": 7, "color": "#7b3fb5", "colorName": "ม่วง" }
+  ],
+  "wednesdayNightNumber": 8,
+  "planetNames": { "1": "อาทิตย์", "2": "จันทร์", "3": "อังคาร", "4": "พุธ", "5": "พฤหัสบดี", "6": "ศุกร์", "7": "เสาร์", "8": "ราหู", "9": "เกตุ" },
+  "thaksaOrder": [1, 2, 3, 4, 7, 5, 8, 6],
+  "thaksaRoles": ["บริวาร", "อายุ", "เดช", "ศรี", "มูละ", "อุตสาหะ", "มนตรี", "กาลกิณี"],
+  "zodiac": {
+    "names": ["ชวด", "ฉลู", "ขาล", "เถาะ", "มะโรง", "มะเส็ง", "มะเมีย", "มะแม", "วอก", "ระกา", "จอ", "กุน"],
+    "ratYear": 2020,
+    "yearStart": "jan1"
+  },
+  "strengths": {
+    "primary": 1.0,
+    "secondary": 0.5
+  }
+}

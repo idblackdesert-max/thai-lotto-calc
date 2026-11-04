@@ -1,0 +1,679 @@
+{
+  "generatedAt": "2026-11-04T03:42:16.999Z",
+  "source": "glo.or.th",
+  "newestDrawDate": "2026-11-01",
+  "draws": [
+    {
+      "drawDate": "2026-11-01",
+      "firstPrize": "423224",
+      "front3": [
+        "300",
+        "950"
+      ],
+      "last3": [
+        "393",
+        "804"
+      ],
+      "last2": "85",
+      "source": "https://api.glo.or.th/utility/file/download/a4f5131b-e5b1-4a02-8ace-89e135c87387"
+    },
+    {
+      "drawDate": "2026-10-16",
+      "firstPrize": "011781",
+      "front3": [
+        "402",
+        "392"
+      ],
+      "last3": [
+        "171",
+        "255"
+      ],
+      "last2": "48",
+      "source": "https://api.glo.or.th/utility/file/download/19b76165-a2a8-48ad-be3c-1d9cab30b4be"
+    },
+    {
+      "drawDate": "2026-10-01",
+      "firstPrize": "402701",
+      "front3": [
+        "791",
+        "912"
+      ],
+      "last3": [
+        "058",
+        "396"
+      ],
+      "last2": "70",
+      "source": "https://api.glo.or.th/utility/file/download/fdbd2111-5461-494d-9e45-91389297d1e9"
+    },
+    {
+      "drawDate": "2026-09-16",
+      "firstPrize": "730640",
+      "front3": [
+        "060",
+        "521"
+      ],
+      "last3": [
+        "266",
+        "041"
+      ],
+      "last2": "64",
+      "source": "https://api.glo.or.th/utility/file/download/b0e2f806-a9bb-4269-b2d8-a155e8a39e2d"
+    },
+    {
+      "drawDate": "2026-09-01",
+      "firstPrize": "417212",
+      "front3": [
+        "257",
+        "346"
+      ],
+      "last3": [
+        "136",
+        "740"
+      ],
+      "last2": "04",
+      "source": "https://api.glo.or.th/utility/file/download/e5b34626-63cd-435c-b5cb-ccb463d1499c"
+    },
+    {
+      "drawDate": "2026-08-16",
+      "firstPrize": "004615",
+      "front3": [
+        "731",
+        "429"
+      ],
+      "last3": [
+        "937",
+        "094"
+      ],
+      "last2": "53",
+      "source": "https://api.glo.or.th/utility/file/download/b02aa6da-4092-4274-badc-99dcd66ae66c"
+    },
+    {
+      "drawDate": "2026-08-01",
+      "firstPrize": "932479",
+      "front3": [
+        "413",
+        "672"
+      ],
+      "last3": [
+        "154",
+        "039"
+      ],
+      "last2": "69",
+      "source": "https://api.glo.or.th/utility/file/download/d0087eea-044b-4b35-9831-6a45cbd0604f"
+    },
+    {
+      "drawDate": "2026-07-16",
+      "firstPrize": "639214",
+      "front3": [
+        "683",
+        "709"
+      ],
+      "last3": [
+        "746",
+        "427"
+      ],
+      "last2": "71",
+      "source": "https://api.glo.or.th/utility/file/download/e42a2164-1d65-4765-b4dd-89212ade2c2c"
+    },
+    {
+      "drawDate": "2026-07-01",
+      "firstPrize": "751495",
+      "front3": [
+        "001",
+        "980"
+      ],
+      "last3": [
+        "304",
+        "531"
+      ],
+      "last2": "62",
+      "source": "https://api.glo.or.th/utility/file/download/a7d660d1-d670-4a7a-b5d9-edf138e97ebd"
+    },
+    {
+      "drawDate": "2026-06-16",
+      "firstPrize": "287184",
+      "front3": [
+        "758",
+        "434"
+      ],
+      "last3": [
+        "007",
+        "721"
+      ],
+      "last2": "48",
+      "source": "https://api.glo.or.th/utility/file/download/8572f5d7-3c5b-4ad2-ab30-0f78dc47511c"
+    },
+    {
+      "drawDate": "2026-06-01",
+      "firstPrize": "173770",
+      "front3": [
+        "848",
+        "415"
+      ],
+      "last3": [
+        "410",
+        "938"
+      ],
+      "last2": "95",
+      "source": "https://api.glo.or.th/utility/file/download/2f7b48e7-3a43-4054-9b02-07fe080e9211"
+    },
+    {
+      "drawDate": "2026-05-16",
+      "firstPrize": "107387",
+      "front3": [
+        "298",
+        "091"
+      ],
+      "last3": [
+        "602",
+        "716"
+      ],
+      "last2": "08",
+      "source": "https://api.glo.or.th/utility/file/download/af78f79e-ed62-49aa-b280-8c78e1dbbfe1"
+    },
+    {
+      "drawDate": "2026-05-02",
+      "firstPrize": "536077",
+      "front3": [
+        "267",
+        "318"
+      ],
+      "last3": [
+        "065",
+        "153"
+      ],
+      "last2": "43",
+      "source": "https://api.glo.or.th/utility/file/download/66d2225a-2ca8-4bb8-a131-e6a239ba76f3"
+    },
+    {
+      "drawDate": "2026-04-16",
+      "firstPrize": "309612",
+      "front3": [
+        "355",
+        "108"
+      ],
+      "last3": [
+        "868",
+        "424"
+      ],
+      "last2": "77",
+      "source": "https://api.glo.or.th/utility/file/download/de7e02f6-de0e-487a-a64e-c09347c9580b"
+    },
+    {
+      "drawDate": "2026-04-01",
+      "firstPrize": "292514",
+      "front3": [
+        "406",
+        "113"
+      ],
+      "last3": [
+        "851",
+        "098"
+      ],
+      "last2": "47",
+      "source": "https://api.glo.or.th/utility/file/download/a5541b69-5126-4480-947c-56f88630b4c3"
+    },
+    {
+      "drawDate": "2026-03-16",
+      "firstPrize": "833009",
+      "front3": [
+        "510",
+        "983"
+      ],
+      "last3": [
+        "439",
+        "954"
+      ],
+      "last2": "64",
+      "source": "https://api.glo.or.th/utility/file/download/5ecdeec4-cbb5-4a9c-9f38-ab1cd4f90916"
+    },
+    {
+      "drawDate": "2026-03-01",
+      "firstPrize": "820866",
+      "front3": [
+        "479",
+        "054"
+      ],
+      "last3": [
+        "068",
+        "837"
+      ],
+      "last2": "06",
+      "source": "https://api.glo.or.th/utility/file/download/10066e8d-d2df-41c5-ae42-8dfc3fff272a"
+    },
+    {
+      "drawDate": "2026-02-16",
+      "firstPrize": "340563",
+      "front3": [
+        "527",
+        "241"
+      ],
+      "last3": [
+        "578",
+        "169"
+      ],
+      "last2": "07",
+      "source": "https://api.glo.or.th/utility/file/download/0df39a6a-974d-4392-81bc-da1c789eb2b5"
+    },
+    {
+      "drawDate": "2026-02-01",
+      "firstPrize": "174629",
+      "front3": [
+        "917",
+        "195"
+      ],
+      "last3": [
+        "408",
+        "041"
+      ],
+      "last2": "48",
+      "source": "https://api.glo.or.th/utility/file/download/486b22aa-643c-4a16-8276-0813c7a7f163"
+    },
+    {
+      "drawDate": "2026-01-17",
+      "firstPrize": "878972",
+      "front3": [
+        "299",
+        "815"
+      ],
+      "last3": [
+        "662",
+        "363"
+      ],
+      "last2": "02",
+      "source": "https://api.glo.or.th/utility/file/download/6ab11f29-5ac7-4275-922c-41096765cae3"
+    },
+    {
+      "drawDate": "2026-01-02",
+      "firstPrize": "837706",
+      "front3": [
+        "694",
+        "347"
+      ],
+      "last3": [
+        "288",
+        "765"
+      ],
+      "last2": "16",
+      "source": "https://api.glo.or.th/utility/file/download/f4575ff4-2286-4125-a9e8-9d9f99042049"
+    },
+    {
+      "drawDate": "2025-12-16",
+      "firstPrize": "763895",
+      "front3": [
+        "431",
+        "176"
+      ],
+      "last3": [
+        "014",
+        "449"
+      ],
+      "last2": "52",
+      "source": "https://api.glo.or.th/utility/file/download/0c8c3f0e-bf9e-4589-bc98-4e68201a52e7"
+    },
+    {
+      "drawDate": "2025-12-01",
+      "firstPrize": "461252",
+      "front3": [
+        "655",
+        "389"
+      ],
+      "last3": [
+        "137",
+        "995"
+      ],
+      "last2": "22",
+      "source": "https://api.glo.or.th/utility/file/download/9371a409-2ca1-465b-a824-e3a58194ef7b"
+    },
+    {
+      "drawDate": "2025-11-16",
+      "firstPrize": "458145",
+      "front3": [
+        "602",
+        "242"
+      ],
+      "last3": [
+        "389",
+        "239"
+      ],
+      "last2": "37",
+      "source": "https://api.glo.or.th/utility/file/download/586cfd18-a909-4982-ab44-d59046995093"
+    },
+    {
+      "drawDate": "2025-11-01",
+      "firstPrize": "345898",
+      "front3": [
+        "449",
+        "328"
+      ],
+      "last3": [
+        "111",
+        "690"
+      ],
+      "last2": "87",
+      "source": "https://api.glo.or.th/utility/file/download/5b7f1a27-18bd-471f-b28f-b55595733c8f"
+    },
+    {
+      "drawDate": "2025-10-16",
+      "firstPrize": "059696",
+      "front3": [
+        "955",
+        "531"
+      ],
+      "last3": [
+        "889",
+        "476"
+      ],
+      "last2": "61",
+      "source": "https://api.glo.or.th/utility/file/download/15290bff-70b2-48a7-a8b9-35bee7c00d54"
+    },
+    {
+      "drawDate": "2025-10-01",
+      "firstPrize": "876978",
+      "front3": [
+        "843",
+        "532"
+      ],
+      "last3": [
+        "280",
+        "605"
+      ],
+      "last2": "77",
+      "source": "https://api.glo.or.th/utility/file/download/0caed849-2cf3-4777-8c3c-5a7bf4dca5d4"
+    },
+    {
+      "drawDate": "2025-09-16",
+      "firstPrize": "074646",
+      "front3": [
+        "740",
+        "512"
+      ],
+      "last3": [
+        "308",
+        "703"
+      ],
+      "last2": "58",
+      "source": "https://api.glo.or.th/utility/file/download/a457cc38-3705-4a59-927f-3c9f90130977"
+    },
+    {
+      "drawDate": "2025-09-01",
+      "firstPrize": "506356",
+      "front3": [
+        "131",
+        "012"
+      ],
+      "last3": [
+        "022",
+        "209"
+      ],
+      "last2": "31",
+      "source": "https://api.glo.or.th/utility/file/download/b3a9d912-8764-40fa-ab0e-4e54e632b744"
+    },
+    {
+      "drawDate": "2025-08-16",
+      "firstPrize": "994865",
+      "front3": [
+        "602",
+        "247"
+      ],
+      "last3": [
+        "834",
+        "989"
+      ],
+      "last2": "63",
+      "source": "https://api.glo.or.th/utility/file/download/f882affc-0e5b-466a-aed7-b72cc016fa47"
+    },
+    {
+      "drawDate": "2025-08-01",
+      "firstPrize": "811852",
+      "front3": [
+        "525",
+        "142"
+      ],
+      "last3": [
+        "891",
+        "512"
+      ],
+      "last2": "50",
+      "source": "https://api.glo.or.th/utility/file/download/0233469e-e3cf-4570-b963-d3b7383aab92"
+    },
+    {
+      "drawDate": "2025-07-16",
+      "firstPrize": "245324",
+      "front3": [
+        "995",
+        "171"
+      ],
+      "last3": [
+        "084",
+        "336"
+      ],
+      "last2": "26",
+      "source": "https://api.glo.or.th/utility/file/download/1277d4f3-8860-4494-81a7-25e6a818a157"
+    },
+    {
+      "drawDate": "2025-07-01",
+      "firstPrize": "949246",
+      "front3": [
+        "680",
+        "169"
+      ],
+      "last3": [
+        "918",
+        "261"
+      ],
+      "last2": "91",
+      "source": "https://api.glo.or.th/utility/file/download/2678d7a1-c212-4700-bf74-fb35d6900c8a"
+    },
+    {
+      "drawDate": "2025-06-16",
+      "firstPrize": "507392",
+      "front3": [
+        "243",
+        "017"
+      ],
+      "last3": [
+        "299",
+        "736"
+      ],
+      "last2": "06",
+      "source": "https://api.glo.or.th/utility/file/download/5d1c7e15-a71a-4a9e-8373-cb82717774e5"
+    },
+    {
+      "drawDate": "2025-06-01",
+      "firstPrize": "559352",
+      "front3": [
+        "349",
+        "134"
+      ],
+      "last3": [
+        "307",
+        "044"
+      ],
+      "last2": "20",
+      "source": "https://api.glo.or.th/utility/file/download/f4b8bd89-24d0-4299-989f-da6e9568e7d3"
+    },
+    {
+      "drawDate": "2025-05-16",
+      "firstPrize": "251309",
+      "front3": [
+        "109",
+        "231"
+      ],
+      "last3": [
+        "965",
+        "631"
+      ],
+      "last2": "87",
+      "source": "https://api.glo.or.th/utility/file/download/5f368ab9-46bd-4591-b702-1ddb210ec29e"
+    },
+    {
+      "drawDate": "2025-05-02",
+      "firstPrize": "213388",
+      "front3": [
+        "826",
+        "116"
+      ],
+      "last3": [
+        "167",
+        "662"
+      ],
+      "last2": "06",
+      "source": "https://api.glo.or.th/utility/file/download/b7d09046-fa71-465f-bebb-c077e37b5857"
+    },
+    {
+      "drawDate": "2025-04-16",
+      "firstPrize": "266227",
+      "front3": [
+        "413",
+        "254"
+      ],
+      "last3": [
+        "474",
+        "760"
+      ],
+      "last2": "85",
+      "source": "https://api.glo.or.th/utility/file/download/45eb50e2-2d95-4508-b2b0-aa915bbea842"
+    },
+    {
+      "drawDate": "2025-04-01",
+      "firstPrize": "669687",
+      "front3": [
+        "635",
+        "760"
+      ],
+      "last3": [
+        "180",
+        "666"
+      ],
+      "last2": "36",
+      "source": "https://api.glo.or.th/utility/file/download/4f8e4aeb-ed2c-4f06-879f-747cb6576a3e"
+    },
+    {
+      "drawDate": "2025-03-16",
+      "firstPrize": "757563",
+      "front3": [
+        "595",
+        "927"
+      ],
+      "last3": [
+        "457",
+        "309"
+      ],
+      "last2": "32",
+      "source": "https://api.glo.or.th/utility/file/download/e47b7922-6fe5-4b45-b414-35c2bb26f32c"
+    },
+    {
+      "drawDate": "2025-03-01",
+      "firstPrize": "818894",
+      "front3": [
+        "139",
+        "530"
+      ],
+      "last3": [
+        "781",
+        "656"
+      ],
+      "last2": "54",
+      "source": "https://api.glo.or.th/utility/file/download/8f133af1-eaec-43fc-96bb-5a9b7cde5722"
+    },
+    {
+      "drawDate": "2025-02-16",
+      "firstPrize": "847377",
+      "front3": [
+        "268",
+        "613"
+      ],
+      "last3": [
+        "652",
+        "001"
+      ],
+      "last2": "50",
+      "source": "https://api.glo.or.th/utility/file/download/fe5fb51b-b53f-4f21-93cf-5cfda806f8e9"
+    },
+    {
+      "drawDate": "2025-02-01",
+      "firstPrize": "558700",
+      "front3": [
+        "285",
+        "418"
+      ],
+      "last3": [
+        "824",
+        "685"
+      ],
+      "last2": "51",
+      "source": "https://api.glo.or.th/utility/file/download/d6b20c70-28a1-489c-88d1-4cc640db0e53"
+    },
+    {
+      "drawDate": "2025-01-17",
+      "firstPrize": "807779",
+      "front3": [
+        "961",
+        "699"
+      ],
+      "last3": [
+        "448",
+        "477"
+      ],
+      "last2": "23",
+      "source": "https://api.glo.or.th/utility/file/download/2daed332-e3f5-40ca-b2cf-76a67a572627"
+    },
+    {
+      "drawDate": "2025-01-02",
+      "firstPrize": "730209",
+      "front3": [
+        "446",
+        "065"
+      ],
+      "last3": [
+        "376",
+        "297"
+      ],
+      "last2": "51",
+      "source": "https://api.glo.or.th/utility/file/download/a9af1ae8-e30b-41c8-9859-429e60b08986"
+    },
+    {
+      "drawDate": "2024-12-16",
+      "firstPrize": "097863",
+      "front3": [
+        "290",
+        "742"
+      ],
+      "last3": [
+        "881",
+        "339"
+      ],
+      "last2": "21",
+      "source": "https://api.glo.or.th/utility/file/download/7936f407-af2c-49bc-85da-f6f4e368806f"
+    },
+    {
+      "drawDate": "2024-12-01",
+      "firstPrize": "669843",
+      "front3": [
+        "626",
+        "559"
+      ],
+      "last3": [
+        "098",
+        "654"
+      ],
+      "last2": "61",
+      "source": "https://api.glo.or.th/utility/file/download/a89340ea-2ec9-4bdb-8279-a5daed0d4060"
+    },
+    {
+      "drawDate": "2024-11-16",
+      "firstPrize": "187221",
+      "front3": [
+        "036",
+        "923"
+      ],
+      "last3": [
+        "980",
+        "547"
+      ],
+      "last2": "38",
+      "source": "https://api.glo.or.th/utility/file/download/f26bc0ca-2c16-4530-a7d2-d1f5378d33cb"
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+name: Update data & deploy
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+  schedule:
+    - cron: '30 10 * * *' # 17:30 เวลาไทย ทุกวัน
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+
+      # ดึงผลงวดใหม่ — แหล่งข้อมูลล่มจะเตือนแต่ไม่ทำให้ล้ม (คงไฟล์เดิมไว้)
+      - run: npm run fetch-data
+
+      # มีงวดใหม่ → commit ไฟล์ข้อมูลกลับเข้า repo (push ด้วย GITHUB_TOKEN ไม่ trigger workflow ซ้ำ)
+      - name: Commit new draws
+        run: |
+          if git diff --quiet -- public/data/draws.json; then
+            echo "ไม่มีข้อมูลใหม่"
+          else
+            NEWEST=$(node -p "require('./public/data/draws.json').newestDrawDate")
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add public/data/draws.json
+            git commit -m "chore(data): update draws ${NEWEST}"
+            git pull --rebase
+            git push
+          fi
+
+      - run: npm test
+      - run: npm run build
+        env:
+          BASE_PATH: /${{ github.event.repository.name }}/
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
