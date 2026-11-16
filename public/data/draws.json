@@ -1,8 +1,22 @@
 {
-  "generatedAt": "2026-11-04T03:42:16.999Z",
+  "generatedAt": "2026-11-16T20:36:57.319Z",
   "source": "glo.or.th",
-  "newestDrawDate": "2026-11-01",
+  "newestDrawDate": "2026-11-16",
   "draws": [
+    {
+      "drawDate": "2026-11-16",
+      "firstPrize": "645654",
+      "front3": [
+        "938",
+        "101"
+      ],
+      "last3": [
+        "106",
+        "782"
+      ],
+      "last2": "06",
+      "source": "https://api.glo.or.th/utility/file/download/efe8c80a-d006-4b28-b037-87f26772bb4e"
+    },
     {
       "drawDate": "2026-11-01",
       "firstPrize": "423224",
@@ -660,20 +674,6 @@
       ],
       "last2": "61",
       "source": "https://api.glo.or.th/utility/file/download/a89340ea-2ec9-4bdb-8279-a5daed0d4060"
-    },
-    {
-      "drawDate": "2024-11-16",
-      "firstPrize": "187221",
-      "front3": [
-        "036",
-        "923"
-      ],
-      "last3": [
-        "980",
-        "547"
-      ],
-      "last2": "38",
-      "source": "https://api.glo.or.th/utility/file/download/f26bc0ca-2c16-4530-a7d2-d1f5378d33cb"
     }
   ]
 }
